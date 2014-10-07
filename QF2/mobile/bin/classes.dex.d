@@ -1,0 +1,20 @@
+C:\Users\Bob\Documents\QF2\mobile\bin\classes.dex : \
+C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\BuildConfig.class \
+C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\MainActivity.class \
+C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R$attr.class \
+C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R$drawable.class \
+C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R$integer.class \
+C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R$layout.class \
+C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R$string.class \
+C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R.class \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\MyGame-6dc3709edaddd92932835b7193b1b14c.jar \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-jogg-44ba6962be579971846fb5aeaed0a6c5.jar \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-android-cfe0366e1bdd8e0f533a235f6dff020a.jar \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\j-ogg-vorbisd-ddbb3407549006e714100eb44924c218.jar \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\j-ogg-oggd-242d943afab34fcbaf92efd13f211445.jar \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-bullet-03f22da6f31d82e1523765149b520417.jar \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-terrain-1e04eef6204ced710b4a46512c9957da.jar \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-effects-91366f8bfd091a791e56783c6b1f800f.jar \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-core-0c70ae1a9765ffe506f3481b6c2f1080.jar \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\google-play-services-8fc8cca09272714f61402ea88d20f27c.jar \
+C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\tonegod.gui-c7e0b5e3f647a8ccf93572952ab67b21.jar \
