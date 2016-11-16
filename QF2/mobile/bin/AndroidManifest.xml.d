@@ -1,2 +1,2 @@
-C:\Users\Bob\Documents\QF2\mobile\bin\AndroidManifest.xml : \
-C:\Users\Bob\Documents\QF2\mobile\AndroidManifest.xml \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/AndroidManifest.xml : \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/AndroidManifest.xml \

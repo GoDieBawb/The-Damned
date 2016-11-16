@@ -58,20 +58,23 @@ public class GuiManager extends AbstractAppState {
     buttonList        = new ArrayList();
     alertTitle        = "";
     screen.setUseTextureAtlas(true,"tonegod/gui/style/atlasdef/atlas.png");
-    screen.setUseMultiTouch(true);
+    //screen.setUseMultiTouch(true);
     this.app.getGuiNode().addControl(screen);
     this.app.getInputManager().setSimulateMouse(true);
     initInteractButton();
     initAlertBox();
     isAndroid  = "Dalvik".equals(System.getProperty("java.vm.name"));
+    
     if (isAndroid)
-    initJoyStick();
+        initJoyStick();
     else
-    player.speedMult = 1;
+        player.speedMult = 1;
+    
     initEyeButton();
     initTitle();
     initMenu();
-    }
+    
+  }
 
   private void initTitle() {     
     

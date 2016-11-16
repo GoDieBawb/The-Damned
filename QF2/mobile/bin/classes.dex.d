@@ -1,20 +1,24 @@
-C:\Users\Bob\Documents\QF2\mobile\bin\classes.dex : \
-C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\BuildConfig.class \
-C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\MainActivity.class \
-C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R$attr.class \
-C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R$drawable.class \
-C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R$integer.class \
-C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R$layout.class \
-C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R$string.class \
-C:\Users\Bob\Documents\QF2\mobile\bin\classes\com\bigbawb\corruption\R.class \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\MyGame-6dc3709edaddd92932835b7193b1b14c.jar \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-jogg-44ba6962be579971846fb5aeaed0a6c5.jar \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-android-cfe0366e1bdd8e0f533a235f6dff020a.jar \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\j-ogg-vorbisd-ddbb3407549006e714100eb44924c218.jar \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\j-ogg-oggd-242d943afab34fcbaf92efd13f211445.jar \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-bullet-03f22da6f31d82e1523765149b520417.jar \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-terrain-1e04eef6204ced710b4a46512c9957da.jar \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-effects-91366f8bfd091a791e56783c6b1f800f.jar \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\jME3-core-0c70ae1a9765ffe506f3481b6c2f1080.jar \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\google-play-services-8fc8cca09272714f61402ea88d20f27c.jar \
-C:\Users\Bob\Documents\QF2\mobile\bin\dexedLibs\tonegod.gui-c7e0b5e3f647a8ccf93572952ab67b21.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes.dex : \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R$integer.class \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R$string.class \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/BuildConfig.class \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R$layout.class \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R.class \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R$attr.class \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R$drawable.class \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/questforge/MainActivity.class \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-effects-3.1.0-beta1-27dbfee89ef90e02f3646cd96213ac4b.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/google-play-services-52fd8fac08b81fa5f158362c238d7cfb.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-android-native-3.1.0-beta1-591f25cf64ddce5378835ceca7e82918.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/j-ogg-all-1.0.0-782c13eb2a1913ee82b3028fb6e7ce18.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-networking-3.1.0-beta1-906a8b20da7b554c5acd2392522750c3.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-bullet-native-android-3.1.0-beta1-8882c4be02ffb110058947e61ce71dc4.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-bullet-3.1.0-beta1-21157e1217413bcb380e77fbb0c431f4.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/tonegod-b18164a6b92b69ba20e87ed3ea225b76.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-terrain-3.1.0-beta1-26023f7d59009c67a1f0f4ef49c960c3.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/MyGame-680409791a794e63f2efe47a6ac9201f.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-plugins-3.1.0-beta1-a6c41aa6f64c6667b67edde97e3f5eb7.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-jogg-3.1.0-beta1-80cff654b564008f6606ffc572e2c4bd.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-core-3.1.0-beta1-8f8145bd73302055c09fcf7b65e8a9f1.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-android-3.1.0-beta1-52fba5375be70314260459783deca8a5.jar \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/snakeyaml-1.10-android-d5e070f07565db62921631b6939ebd3d.jar \
