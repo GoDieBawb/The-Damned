@@ -1,4 +1,4 @@
-package com.bigbawb.questforge;
+package com.bigbawb.corruption;
  
 import android.os.Bundle;
 import android.view.Gravity;

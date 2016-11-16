@@ -1,5 +1,6 @@
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes.dex : \
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R$integer.class \
+/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/MainActivity.class \
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R$string.class \
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/BuildConfig.class \
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R$layout.class \
