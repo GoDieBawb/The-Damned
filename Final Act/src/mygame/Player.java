@@ -57,7 +57,7 @@ public class Player extends Node {
     }
     
     catch(NullPointerException e) {
-        filePath = System.getProperty("user.home")+ "\\";
+        filePath = System.getProperty("user.home")+ "/";
     }
     
      map.put("Score", newScore);
@@ -78,7 +78,7 @@ public class Player extends Node {
      }
     
      catch(NullPointerException e) {
-        filePath = System.getProperty("user.home")+ "\\";
+        filePath = System.getProperty("user.home")+ "/";
      }
      
      System.out.println("File Path Is: " + filePath);
