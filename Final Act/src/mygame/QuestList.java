@@ -15,8 +15,8 @@ public class QuestList extends ArrayList {
   private Player player;
     
   public QuestList(Player player) {
-    this.player = player;
-    }
+    this.player = player; 
+  }
   
   public Quest getQuest(String questName) {
     
