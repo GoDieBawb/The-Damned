@@ -5,6 +5,7 @@ import com.jme3.app.SimpleApplication;
 import com.jme3.app.state.AbstractAppState;
 import com.jme3.app.state.AppStateManager;
 import com.jme3.asset.AssetManager;
+import com.jme3.asset.TextureKey;
 import com.jme3.bullet.BulletAppState;
 import com.jme3.bullet.control.RigidBodyControl;
 import com.jme3.material.Material;
@@ -119,7 +120,12 @@ public class SceneManager extends AbstractAppState {
         
         else if (geom.getMaterial().getTextureParam("DiffuseMap_1") != null) {
             
-          tat.setTexture("Alpha", geom.getMaterial().getTextureParam("AlphaMap").getTextureValue());
+          String     alTexPath  = geom.getMaterial().getTextureParam("AlphaMap").getTextureValue().getName().substring(1);
+          TextureKey alkey      = new TextureKey(alTexPath, false);
+          Texture    alTex      = assetManager.loadTexture(alkey);  
+          tat.setTexture("Alpha", alTex);            
+            
+          //tat.setTexture("Alpha", geom.getMaterial().getTextureParam("AlphaMap").getTextureValue());
           
           if (geom.getMaterial().getTextureParam("DiffuseMap") != null) {
            

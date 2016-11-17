@@ -7,7 +7,6 @@
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R.class \
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R$attr.class \
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/corruption/R$drawable.class \
-/home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/classes/com/bigbawb/questforge/MainActivity.class \
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-effects-3.1.0-beta1-27dbfee89ef90e02f3646cd96213ac4b.jar \
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/google-play-services-52fd8fac08b81fa5f158362c238d7cfb.jar \
 /home/bob/Documents/Github/The-Damned/Final Act/mobile/bin/dexedLibs/jme3-android-native-3.1.0-beta1-591f25cf64ddce5378835ceca7e82918.jar \
