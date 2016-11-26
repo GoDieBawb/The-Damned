@@ -18,93 +18,94 @@ import com.jme3.math.Vector3f;
 * @author Bob
 */
 public class InteractionManager extends AbstractAppState implements ActionListener {
-
-  private SimpleApplication app;
-  private AppStateManager stateManager;
-  private AssetManager assetManager;
-  private InputManager inputManager;
-  private Player player;
-  private Vector3f walkDirection = new Vector3f();
-  private Vector3f camDir = new Vector3f();
-  private Vector3f camLeft = new Vector3f();
-  public boolean inv = false, left = false, right = false, up = false, down = false, click = false;
-  public boolean topDown;
-  
-  @Override
-  public void initialize(AppStateManager stateManager, Application app){
-    super.initialize(stateManager, app);
-    this.app = (SimpleApplication) app;
-    this.stateManager = this.app.getStateManager();
-    this.assetManager = this.app.getAssetManager();
-    this.inputManager = this.app.getInputManager();
-    this.player = this.stateManager.getState(PlayerManager.class).player;
-    setUpKeys();
-    }
-  
-  //Sets up key listeners for the action listener
-  private void setUpKeys(){
-    inputManager.addMapping("Up", new KeyTrigger(KeyInput.KEY_W));
-    inputManager.addMapping("Down", new KeyTrigger(KeyInput.KEY_S));
-    inputManager.addMapping("Left", new KeyTrigger(KeyInput.KEY_A));
-    inputManager.addMapping("Right", new KeyTrigger(KeyInput.KEY_D));
-    inputManager.addMapping("Click", new MouseButtonTrigger(MouseInput.BUTTON_LEFT));
-    inputManager.addMapping("Inventory", new KeyTrigger(KeyInput.KEY_E));
-    inputManager.addMapping("Space", new KeyTrigger(KeyInput.KEY_SPACE));
-    inputManager.addMapping("Filter", new KeyTrigger(KeyInput.KEY_F));
-    inputManager.addListener(this, "Up");
-    inputManager.addListener(this, "Down");
-    inputManager.addListener(this, "Left");
-    inputManager.addListener(this, "Right");
-    inputManager.addListener(this, "Click");
-    inputManager.addListener(this, "Inventory");
-    inputManager.addListener(this, "Space");
-    inputManager.addListener(this, "Filter");
-    }
-
-  public void onAction(String binding, boolean isPressed, float tpf) {
     
-    if (binding.equals("Inventory")) {
-      inv = isPressed;
-      if (isPressed){
-      inputManager.setCursorVisible(true);
-      stateManager.getState(CameraManager.class).cam.setDragToRotate(true);
-      }
-      else {
-      inputManager.setCursorVisible(false);
-      stateManager.getState(CameraManager.class).cam.setDragToRotate(false);
-      }
-    }
-      
-    if (binding.equals("Space") && !isPressed) {
-      
-      if (!player.hasSwung)
-      player.swing(stateManager);
-      }
-
-    if (binding.equals("Left")) {
-        
-      left = isPressed;
-      
-    } else if (binding.equals("Right")) {
-  
-      right = isPressed;
-      
-      }
+    private SimpleApplication app;
+    private AppStateManager stateManager;
+    private AssetManager assetManager;
+    private InputManager inputManager;
+    private Player player;
+    private Vector3f walkDirection = new Vector3f();
+    private Vector3f camDir = new Vector3f();
+    private Vector3f camLeft = new Vector3f();
+    public boolean inv = false, left = false, right = false, up = false, down = false, click = false;
+    public boolean topDown;
     
-    if (binding.equals("Down")) {
-      
-      down = isPressed;
-    
-    } else if (binding.equals("Up")) {
-        
-      up = isPressed;
-      
+    @Override
+    public void initialize(AppStateManager stateManager, Application app){
+        super.initialize(stateManager, app);
+        this.app = (SimpleApplication) app;
+        this.stateManager = this.app.getStateManager();
+        this.assetManager = this.app.getAssetManager();
+        this.inputManager = this.app.getInputManager();
+        this.player = this.stateManager.getState(PlayerManager.class).player;
+        setUpKeys();
     }
+    
+    //Sets up key listeners for the action listener
+    private void setUpKeys(){
+        inputManager.addMapping("Up", new KeyTrigger(KeyInput.KEY_W));
+        inputManager.addMapping("Down", new KeyTrigger(KeyInput.KEY_S));
+        inputManager.addMapping("Left", new KeyTrigger(KeyInput.KEY_A));
+        inputManager.addMapping("Right", new KeyTrigger(KeyInput.KEY_D));
+        inputManager.addMapping("Click", new MouseButtonTrigger(MouseInput.BUTTON_LEFT));
+        inputManager.addMapping("Inventory", new KeyTrigger(KeyInput.KEY_E));
+        inputManager.addMapping("Space", new KeyTrigger(KeyInput.KEY_SPACE));
+        inputManager.addMapping("Filter", new KeyTrigger(KeyInput.KEY_F));
+        inputManager.addListener(this, "Up");
+        inputManager.addListener(this, "Down");
+        inputManager.addListener(this, "Left");
+        inputManager.addListener(this, "Right");
+        inputManager.addListener(this, "Click");
+        inputManager.addListener(this, "Inventory");
+        inputManager.addListener(this, "Space");
+        inputManager.addListener(this, "Filter");
+    }
+    
+    @Override
+    public void onAction(String binding, boolean isPressed, float tpf) {
         
-  }
-  
-  private void chaseMove(){
-      
+        if (binding.equals("Inventory")) {
+            inv = isPressed;
+            if (isPressed){
+                inputManager.setCursorVisible(true);
+                stateManager.getState(CameraManager.class).cam.setDragToRotate(true);
+            }
+            else {
+                inputManager.setCursorVisible(false);
+                stateManager.getState(CameraManager.class).cam.setDragToRotate(false);
+            }
+        }
+        
+        if (binding.equals("Space") && !isPressed) {
+            
+            if (!player.hasSwung)
+                player.swing(stateManager);
+        }
+        
+        if (binding.equals("Left")) {
+            
+            left = isPressed;
+            
+        } else if (binding.equals("Right")) {
+            
+            right = isPressed;
+            
+        }
+        
+        if (binding.equals("Down")) {
+            
+            down = isPressed;
+            
+        } else if (binding.equals("Up")) {
+            
+            up = isPressed;
+            
+        }
+        
+    }
+    
+    private void chaseMove(){
+        
         camDir.set(this.app.getCamera().getDirection()).multLocal(10.0f, 0.0f, 10.0f);
         camLeft.set(this.app.getCamera().getLeft()).multLocal(10.0f);
         walkDirection.set(0, 0, 0);
@@ -126,22 +127,22 @@ public class InteractionManager extends AbstractAppState implements ActionListen
         else if (right) {
             walkDirection.addLocal(camLeft.negate());
             player.run();
-        
+            
         } else if (!up && !down) {
             player.idle();
         }
         
-       player.phys.setWalkDirection(walkDirection.mult(.7f));
-       
-       if (!up && !down && !left && !right)
-       player.phys.setViewDirection(camDir);
-       else 
-       player.phys.setViewDirection(walkDirection);
-         
-       
+        player.phys.setWalkDirection(walkDirection.mult(.7f));
+        
+        if (!up && !down && !left && !right)
+            player.phys.setViewDirection(camDir);
+        else
+            player.phys.setViewDirection(walkDirection);
+        
+        
     }
-  
-  private void topDownMove(){
+    
+    private void topDownMove(){
         camDir.set(this.app.getCamera().getDirection()).multLocal(10.0f, 0.0f, 10.0f);
         camLeft.set(this.app.getCamera().getLeft()).multLocal(10.0f);
         walkDirection.set(0, 0, 0);
@@ -161,80 +162,80 @@ public class InteractionManager extends AbstractAppState implements ActionListen
         }
         else if (right) {
             xMove = -5;
-        
-        } 
+            
+        }
         
         if(up||down||left||right) {
             
-          player.run();
+            player.run();
             
         } else {
-          player.idle();
-          }
+            player.idle();
+        }
         
-       walkDirection.addLocal(xMove, 0, zMove); 
+        walkDirection.addLocal(xMove, 0, zMove);
         
-       player.phys.setWalkDirection(walkDirection.mult(.7f));
+        player.phys.setWalkDirection(walkDirection.mult(.7f));
     }
-  
-  private void rotate(){
-      
-   InteractionManager inter = app.getStateManager().getState(InteractionManager.class);
     
-    if (up) {
-      
-      if (left) {
-        player.phys.setViewDirection(new Vector3f(999,0,999));
-        }
-      
-      else if (right) {
-        player.phys.setViewDirection(new Vector3f(-999,0,999));
-        }
-      
-      else {
-        player.phys.setViewDirection(new Vector3f(0,0,999));
-        }
-      
-      }
-    
-    else if (down) {
-      
-      if (left) {
-        player.phys.setViewDirection(new Vector3f(999,0,-999));
-        }
-      
-      else if (right) {
-        player.phys.setViewDirection(new Vector3f(-999,0,-999));
-        }
-      
-      else {
-        player.phys.setViewDirection(new Vector3f(0,0,-999));
-        } 
+    private void rotate(){
         
-      }
-    
-    else if (left) {
-      player.phys.setViewDirection(new Vector3f(999,0,0));
-      }
-    
-    else if (right){
-      player.phys.setViewDirection(new Vector3f(-999,0,0));
-      }
+        InteractionManager inter = app.getStateManager().getState(InteractionManager.class);
+        
+        if (up) {
+            
+            if (left) {
+                player.phys.setViewDirection(new Vector3f(999,0,999));
+            }
+            
+            else if (right) {
+                player.phys.setViewDirection(new Vector3f(-999,0,999));
+            }
+            
+            else {
+                player.phys.setViewDirection(new Vector3f(0,0,999));
+            }
+            
+        }
+        
+        else if (down) {
+            
+            if (left) {
+                player.phys.setViewDirection(new Vector3f(999,0,-999));
+            }
+            
+            else if (right) {
+                player.phys.setViewDirection(new Vector3f(-999,0,-999));
+            }
+            
+            else {
+                player.phys.setViewDirection(new Vector3f(0,0,-999));
+            }
+            
+        }
+        
+        else if (left) {
+            player.phys.setViewDirection(new Vector3f(999,0,0));
+        }
+        
+        else if (right){
+            player.phys.setViewDirection(new Vector3f(-999,0,0));
+        }
     }
-  
-  @Override
-  public void update(float tpf) {
-      
-    if (topDown) {
-    topDownMove();
-    rotate();
+    
+    @Override
+    public void update(float tpf) {
+        
+        if (topDown) {
+            topDownMove();
+            rotate();
+        }
+        
+        else {
+            chaseMove();
+        }
+        
+        
     }
     
-    else {    
-      chaseMove();
-      }
-    
-    
-    }
-  
-  }
+}

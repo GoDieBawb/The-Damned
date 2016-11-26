@@ -11,28 +11,28 @@ import java.util.ArrayList;
 * @author Bob
 */
 public class QuestList extends ArrayList {
-  
-  private Player player;
     
-  public QuestList(Player player) {
-    this.player = player; 
-  }
-  
-  public Quest getQuest(String questName) {
+    private Player player;
     
-    
-    for (int i = 0; i < player.questList.size(); i++){
-  
-      Quest currentQuest = (Quest) player.questList.get(i);
-      
-      if (currentQuest.name.equals(questName)){
-        return currentQuest;
-        }
-      
-      }
-
-    return null;
-    
+    public QuestList(Player player) {
+        this.player = player;
     }
     
-  }
+    public Quest getQuest(String questName) {
+        
+        
+        for (int i = 0; i < player.questList.size(); i++){
+            
+            Quest currentQuest = (Quest) player.questList.get(i);
+            
+            if (currentQuest.name.equals(questName)){
+                return currentQuest;
+            }
+            
+        }
+        
+        return null;
+        
+    }
+    
+}

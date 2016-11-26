@@ -1,7 +1,7 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+* To change this template, choose Tools | Templates
+* and open the template in the editor.
+*/
 package mygame.Quests.Mission1;
 
 import com.jme3.app.state.AppStateManager;
@@ -11,57 +11,54 @@ import mygame.Interactable;
 import mygame.Quest;
 
 /**
- *
- * @author Bob
- */
+*
+* @author Bob
+*/
 public class GoblinTreeQuest extends Quest {
     
-  public GoblinTreeQuest(AppStateManager stateManager, Node holder) {
-    super(stateManager, holder);
-    name = "GoblinQuest";
+    public GoblinTreeQuest(AppStateManager stateManager, Node holder) {
+        super(stateManager, holder);
+        name = "GoblinQuest";
     }
-  
-  @Override
-  public void act() {
-      
-    Quest goblinQuest = player.questList.getQuest("GoblinQuest");
-    String speech;
     
-    if (goblinQuest == null) {
-      goblinQuest      = new GoblinQuest(stateManager, player);
-      goblinQuest.step = "Start";
-      player.questList.add(goblinQuest);
-      }
-    
-    if (goblinQuest.step.equals("Start")) {
-      speech = "A tree in the Goblin Forest...";
-      }
-    
-    else if (goblinQuest.step.equals("GetWood")) {
-      speech           = "You chop down the tree, retrieving the wood.";
-      goblinQuest.step = "FixGate";
-      Node in          = holder.getParent();
-      holder.removeFromParent();
-      
-      //Move the Goblins Into The House
-      
-      for (int i = 0; i < in.getQuantity(); i++) {
-          
-        Node ci = (Node) ((Interactable)in.getChild(i)).model;
+    @Override
+    public void act() {
         
-        if (ci.getUserData("Name").equals("Goblin"))
-        ci.setLocalTranslation(new Vector3f(-66,3.6f,-71));  
+        Quest goblinQuest = player.questList.getQuest("GoblinQuest");
+        String speech;
         
+        if (goblinQuest == null) {
+            goblinQuest      = new GoblinQuest(stateManager, player);
+            goblinQuest.step = "Start";
+            player.questList.add(goblinQuest);
         }
-      
-      }
-    
-    else {
-      speech = "A tree in the Goblin Forest...";
-      }
-    
-    gui.showAlert(holder.getName(), speech);
-    
+        
+        switch (goblinQuest.step) {
+            case "Start":
+                speech = "A tree in the Goblin Forest...";
+                break;
+            case "GetWood":
+                speech           = "You chop down the tree, retrieving the wood.";
+                goblinQuest.step = "FixGate";
+                Node in          = holder.getParent();
+                holder.removeFromParent();
+                //Move the Goblins Into The House
+                
+                for (int i = 0; i < in.getQuantity(); i++) {
+                    
+                    Node ci = (Node) ((Interactable)in.getChild(i)).model;
+                    
+                    if (ci.getUserData("Name").equals("Goblin"))
+                        ci.setLocalTranslation(new Vector3f(-66,3.6f,-71));
+                    
+                }   break;
+            default:
+                speech = "A tree in the Goblin Forest...";
+                break;
+        }
+        
+        gui.showAlert(holder.getName(), speech);
+        
     }
     
-  }
+}

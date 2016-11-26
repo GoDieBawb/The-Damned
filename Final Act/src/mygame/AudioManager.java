@@ -16,33 +16,33 @@ import com.jme3.audio.AudioNode;
 * @author Bob
 */
 public class AudioManager extends AbstractAppState {
-
-  private SimpleApplication app;
-  private AssetManager assetManager;
-  private AudioNode music;
-  
-  @Override
-  public void initialize(AppStateManager stateManager, Application app){
-    super.initialize(stateManager, app);
-    this.app          = (SimpleApplication) app;
-    this.assetManager = this.app.getAssetManager();
-    initAudio();
+    
+    private SimpleApplication app;
+    private AssetManager assetManager;
+    private AudioNode music;
+    
+    @Override
+    public void initialize(AppStateManager stateManager, Application app){
+        super.initialize(stateManager, app);
+        this.app          = (SimpleApplication) app;
+        this.assetManager = this.app.getAssetManager();
+        initAudio();
     }
-  
-  private void initAudio(){
-    music = new AudioNode(assetManager, "Sounds/Song.ogg", false);
-    music.setLooping(true);
-    music.setPositional(false);
-    music.setVolume(.2f);
-    this.app.getRootNode().attachChild(music);
+    
+    private void initAudio(){
+        music = new AudioNode(assetManager, "Sounds/Song.ogg", false);
+        music.setLooping(true);
+        music.setPositional(false);
+        music.setVolume(.2f);
+        this.app.getRootNode().attachChild(music);
     }
-  
-  public void playSong() {
-    music.play();
+    
+    public void playSong() {
+        music.play();
     }
-  
-  public void stopSong() {
-    music.stop();
+    
+    public void stopSong() {
+        music.stop();
     }
-  
-  }
+    
+}
